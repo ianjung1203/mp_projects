@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 제목: 부모의 위/왼쪽에 제약 -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Constraint Layout 실습"
+        android:textColor="#8BC34A"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 주사위 A, B: 가로 체인(packed)으로 묶어 가운데 배치 -->
+    <ImageView
+        android:id="@+id/imageViewDiceA"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/dice1"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewDiceB"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <ImageView
+        android:id="@+id/imageViewDiceB"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/dice1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewDiceA"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDiceA" />
+
+    <!-- 합계 입력: 좌우를 부모에 똑같이 제약 → 가운데 정렬 -->
+    <EditText
+        android:id="@+id/editTextAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:hint="합계는?"
+        android:inputType="number"
+        android:minWidth="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewDiceA" />
+
+    <!-- 결과보기: 너비 0dp(제약에 맞춤) -->
+    <Button
+        android:id="@+id/buttonResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="onClickResult"
+        android:text="결과보기"
+        app:backgroundTint="#26C6DA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAnswer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0F5"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="LinearLayout 실습"
+        android:textColor="#8BC34A"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <!-- 문제 그림 (고양이 왼쪽 무리 ○ 오른쪽 무리) -->
+    <ImageView
+        android:id="@+id/imageViewQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/bg" />
+
+    <!-- 비교 연산자 버튼 3개: 가로 방향 선형 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewBtn1"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="8dp"
+            android:onClick="onClickChoice"
+            android:src="@drawable/btn1m" />
+
+        <ImageView
+            android:id="@+id/imageViewBtn2"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="8dp"
+            android:onClick="onClickChoice"
+            android:src="@drawable/btn2m" />
+
+        <ImageView
+            android:id="@+id/imageViewBtn3"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="8dp"
+            android:onClick="onClickChoice"
+            android:src="@drawable/btn3m" />
+    </LinearLayout>
+
+</LinearLayout>

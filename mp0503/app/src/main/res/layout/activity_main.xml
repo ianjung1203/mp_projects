@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0F5"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="RadioButton 실습"
+        android:textColor="#8BC34A"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="185dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/cat" />
+
+    <!-- 라디오 그룹: 이 안의 라디오 버튼은 하나만 선택됨 -->
+    <RadioGroup
+        android:id="@+id/radioGroupShadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <!-- button=@null + drawableTop: 동그라미를 칸 가운데에 표시 -->
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorSingle"
+            android:gravity="center" />
+
+        <!-- button=@null + drawableTop: 동그라미를 칸 가운데에 표시 -->
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorSingle"
+            android:gravity="center" />
+
+        <!-- button=@null + drawableTop: 동그라미를 칸 가운데에 표시 -->
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorSingle"
+            android:gravity="center" />
+
+        <!-- button=@null + drawableTop: 동그라미를 칸 가운데에 표시 -->
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorSingle"
+            android:gravity="center" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewShadow1"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:src="@drawable/cat1" />
+
+        <ImageView
+            android:id="@+id/imageViewShadow2"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:src="@drawable/cat2" />
+
+        <ImageView
+            android:id="@+id/imageViewShadow3"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:src="@drawable/cat3" />
+
+        <ImageView
+            android:id="@+id/imageViewShadow4"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:src="@drawable/cat4" />
+
+    </LinearLayout>
+
+</LinearLayout>
